@@ -1,0 +1,58 @@
+/* ─────────────────── Hero section (unchanged) ─────────────────── */
+.hero {
+  height: 100vh;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  animation: fadeIn 2s ease-in-out;
+  padding: 0 15px;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  0%   { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ─────────────────── Static multicolour ring ─────────────────── */
+.image-wrapper { position: relative; display: inline-block; }
+
+.glow-border {
+  padding: 6px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    #ff6ec4,
+    #7873f5,
+    #4ade80,
+    #22d3ee,
+    #ff6ec4
+  );
+  display: inline-block;              /* ← no rotation animation */
+}
+
+/* ─────────────────── Animated shadow colours ─────────────────── */
+.hero-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #111;
+  background-color: #000;
+  display: block;
+
+  /* coloured glow + animation */
+  box-shadow: 0 0 25px #ff6ec4;
+  animation: shadowPulse 6s linear infinite;
+  transition: transform 0.3s ease;
+}
+
+.hero-img:hover { transform: scale(1.05); }
+
+/* Shadow colour‑cycle keyframes */
+@keyframes shadowPulse {
+  0%   { box-shadow: 0 0 25px #ff6ec4; }
+  25%  { box-shadow: 0 0 25px #7873f5; }
+  50%  { box-shadow: 0 0 25px #4ade80; }
+  75%  { box-shadow: 0 0 25px #22d3ee; }
+  100% { box-shadow: 0 0 25px #ff6ec4; }
+}

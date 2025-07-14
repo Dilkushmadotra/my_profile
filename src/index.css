@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  background-color: #111;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* Unified background for all sections */
+.section-wrapper {
+  background: linear-gradient(to right, #1a2a3a, #2b3f4f, #3c5464);
+  color: #f0f0f0;
+  padding: 60px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Stylish section heading */
+.section-wrapper h2 {
+  color: #00ffd0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Inner card-style container for all sections */
+.section-card {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+}
+.view-project-btn {
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 20px rgba(0, 114, 255, 0.3);
+}
+
+.view-project-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 24px rgba(0, 114, 255, 0.4);
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+}
+
+.view-project-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 114, 255, 0.2);
+}
